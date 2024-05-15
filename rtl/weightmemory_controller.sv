@@ -155,9 +155,6 @@ module weightmemory_controller
                weights_flush_o = '1;
             end
          end
-         //$display("[weightmemory_controller] --- current_read_start_address_d: %x", current_read_start_address_d);
-         //$display("[weightmemory_controller] --- current_read_address_d: %x", current_read_address_d);
-
          current_read_start_address_d = current_read_start_address_q + (K*K*WEIGHT_STAGGER);
          current_read_address_d = current_read_start_address_d;
          // current_read_address_d = (current_read_address_q / (K*K*WEIGHT_STAGGER)) * (K*K*WEIGHT_STAGGER) + (K*K*WEIGHT_STAGGER);

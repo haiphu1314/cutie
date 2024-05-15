@@ -236,8 +236,6 @@ module activationmemory_internal_wrapper
          prev_read_bank <= read_enable_bank_set_i;
          left_shift_q <= left_shift_i;
          scatter_coefficient_q <= scatter_coefficient_i;
-         //$display("[activationmemory_internal_wrapper]read_enable_i %b", read_enable_i);
-         //$display("[activationmemory_internal_wrapper]write_enable_i %b", write_enable_i);
       end
    end
 

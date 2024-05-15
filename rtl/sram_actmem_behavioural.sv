@@ -87,8 +87,6 @@ module sram_actmem
                      ram[addr_i][i] <= wdata_i[i];
                   end
                end
-               $display("[sram_actmem_behavioural] ADDR_DATA_IN: %x", addr_i);
-               $display("[sram_actmem_behavioural] DATA_IN: %x", wdata_i);
             end
          end // if (req_i)
       end
@@ -97,8 +95,6 @@ module sram_actmem
    always_comb begin
       if(valid_q == '1) begin
          rdata_o = ram[raddr_q];
-         $display("[sram_actmem_behavioural] ADDR_DATA_OUT: %x", raddr_q);
-         $display("[sram_actmem_behavioural] DATA_OUT: %x", rdata_o);
       end else begin
          rdata_o = 'X;
       end

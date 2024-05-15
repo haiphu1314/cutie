@@ -411,9 +411,6 @@ module LUCA
    end
 
    always_ff @(posedge clk_i, negedge rst_ni) begin
-      $display("[LUCA] --- weights_ni_o: %d",weights_ni_o);
-      $display("[LUCA] --- weights_no_o: %d",weights_no_o);
-
       if(~rst_ni)begin
          timer_q <= '0;
          timer_started_q <= '0;

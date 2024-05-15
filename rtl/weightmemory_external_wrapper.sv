@@ -140,14 +140,6 @@ module weightmemory_external_wrapper
          command_source_q <= command_source;
          prev_external_we <= external_we_i;
       end
-      // if(read_enable == 1) begin
-      //    $display("[weightmemory_external_wrapper] --- ADDR_READ_WEIGHT: %x", read_addr_i);
-      //    $display("[weightmemory_external_wrapper] --- DATA_READ_WEIGHT: %x", wdata_i);
-      // end
-      // if(write_enable != 0) begin
-      //    $display("[weightmemory_external_wrapper] --- ADDR_WRITE_WEIGHT: %x", write_addr_i);
-      //    $display("[weightmemory_external_wrapper] --- DATA_WRITE_WEIGHT: %x", weights_o);
-      // end
    end
 
    weightmemory_internal_wrapper   #(

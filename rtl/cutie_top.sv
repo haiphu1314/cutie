@@ -724,37 +724,13 @@ module cutie_top
          if(linebuffer_master_controller_ready_read_o == 1) begin
             acts_buffer_q <= linebuffer_acts_o;
          end   
-         $display("\n\n\n"); 
          if(LUCA_weights_latch_new_layer_o == 1) begin
-            $display("[cutie_top] --- LUCA_weights_latch_new_layer_o: %b", LUCA_weights_latch_new_layer_o); 
          end
          if(LUCA_compute_disable_i == 0) begin
-            $display("[cutie_top] --- LUCA_compute_disable_i: %x ####################################################################################################################################", LUCA_compute_disable_i); 
          end
-         // if (lb2ocu_controller_ready_i == 1)begin
-         $display("[cutie_top] --- actmem_external_bank_set_i: %b", actmem_external_bank_set_i);
-         // $display("[cutie_top] --- actmem_external_we_i: %x", actmem_external_we_i);
-         // $display("[cutie_top] --- actmem_external_req_i: %x", actmem_external_req_i);
-         // $display("[cutie_top] --- actmem_external_addr_i: %x", actmem_external_addr_i);
-         // $display("[cutie_top] --- actmem_external_acts_o: %x", actmem_external_acts_o);
-         // $display("[cutie_top] --- actmem_external_wdata_i: %x", actmem_external_wdata_i);
-         // $display("[cutie_top] --- actmem_external_valid_o: %d", actmem_external_valid_o);
-         // $display("=====================================================================================================================================================================");
-         // $display("[cutie_top] --- lb2ocu_controller_ready_i: %x", lb2ocu_controller_ready_i);
-         // $display("[cutie_top] --- actmem_read_enable_i: %d", actmem_read_enable_i);
-         // $display("[cutie_top] --- actmem_read_enable_bank_set_i: %d", actmem_read_enable_bank_set_i);
-         // end
          if(lb2ocu_controller_new_layer_i == 1) begin
-            $display("[cutie_top] --- lb2ocu_controller_new_layer_i: %d ********************************************************************", 1);
-            $display("[cutie_top] --- lb2ocu_controller_layer_imageheight_i: %d", lb2ocu_controller_layer_imageheight_i);
-            $display("[cutie_top] --- lb2ocu_controller_layer_imagewidth_i: %d", lb2ocu_controller_layer_imagewidth_i);
-            $display("[cutie_top] --- lb2ocu_controller_layer_ni_i: %d", lb2ocu_controller_layer_ni_i);
+
          end
-         // $display("[cutie_top] --- actmem_write_addr_i: %d", actmem_write_addr_i);
-         // $display("[cutie_top] --- actmem_write_enable_i: %d", actmem_write_enable_i);
-         // $display("[cutie_top] --- actmem_write_enable_bank_set_i: %d", actmem_write_enable_bank_set_i);
-         // $display("[cutie_top] --- actmem_wdata_i: %x", actmem_wdata_i);
-         // $display("\n[cutie_top] --- weightmem_external_wdata_i: %x", weightmem_external_wdata_i);
       end
    end // always_ff @ (posedge clk, negedge rst)
 
@@ -1273,10 +1249,6 @@ module cutie_top
       end else begin
          weightmemory_external_bank_q <= weightmem_external_bank_i;
       end
-      $display("[cutie_top] --- weightmem_external_bank_i: %b", weightmem_external_bank_i);
-      $display("[cutie_top] --- LUCA_compute_ni_o: %d", LUCA_compute_ni_o);
-      $display("[cutie_top] --- LUCA_compute_no_o: %d", LUCA_compute_no_o);
-
    end
 
    always_comb begin

@@ -80,8 +80,6 @@ module sram_weightmem
                      ram[addr_i][i] <= wdata_i[i];
                   end
                end
-               $display("[sram_weightmem_behavioural] ADDR_WRITE>>>_WEIGHT: %x", addr_i);
-               $display("[sram_weightmem_behavioural] DATA_WRITE>>>_WEIGHT: %x", wdata_i);
             end
          end // if (req_i)
       end
@@ -90,8 +88,6 @@ module sram_weightmem
    always_comb begin
       if(valid_q == '1) begin
          rdata_o = ram[raddr_q];
-         $display("[sram_weightmem_behavioural] ADDR_READ<<<_WEIGHT: %x", raddr_q);
-         $display("[sram_weightmem_behavioural] DATA_READ<<<_WEIGHT: %x", rdata_o);
       end else begin
          rdata_o = 'X;
       end

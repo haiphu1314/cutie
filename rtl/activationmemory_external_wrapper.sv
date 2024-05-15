@@ -151,7 +151,6 @@ module activationmemory_external_wrapper
       read_addr = '0;
       write_addr = '0;
       wdata = '0;
-      // $display ("external_wdata_i: %x",external_wdata_i);
       // Access arbitration
       if(external_req_i == 1) begin
          command_source = 1;
@@ -202,9 +201,7 @@ module activationmemory_external_wrapper
          command_source_q <= command_source;
          prev_external_we <= external_we_i;
       end
-      // $display("bank: %d", bank);
-      // $display("external_wdata_i: %x",external_wdata_i);
-      // $display("external_acts_o: %x",external_acts_o);
+
    end
 
 
